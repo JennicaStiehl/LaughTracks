@@ -10,7 +10,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'pry'
-  gem 'rack-test'
+  gem 'rack-test', '~>0.6.3'
   gem 'rspec'
   gem 'shotgun'
   gem 'tux'
