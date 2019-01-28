@@ -1,29 +1,44 @@
-body {
-  /* background-color: blue; */
+*{
+  font-family: helvetica;
 }
 
 .image {
-  width: 200px;
-  height: 200px;
-  list-style-type: none;
+  width: 45%;
 }
-li {
-  list-style-image: none|url|initial|inherit;
-}
+
 nav{
   color:white;
   background-color:navy;
 }
-nav ul{
-  padding:1%;
+
+body{
+  background-color: #fff;
+  color: navy;
+}
+
+#container{
+  display: grid;
+}
+#main-block{
+  float: left;
+  width: 75%;
+  display: in-line;
+}
+
+#side-bar{
+  float: right;
+  width: 25%;
+  display: in-line;
+  word-wrap: break-word;
+  font-size:
+}
+
+table{
+  text-align: left;
+  font-size: 10px;
+}
+
+li{
+  font-size: 15px;
   list-style: none;
-}
-nav li{
-  display: inline;
-}
-nav a{
-  color:white;
-  text-decoration: none;
-  font-size: 18px;
-  padding-right: 15px;
 }

@@ -6,29 +6,59 @@
 </head>
 <body>
   <nav>
-    <ul>
-      <li>Average Age: </li>
-      <li><%= @comedians.average_age %></li>
-      <li>Average Specials Length: </li>
-      <li><%= @comedians.specials_average_length %></li>
-    </ul>
+    <h1>Comedian List</h1>
   </nav>
-  <h1>Comedian Info</h1>
-<% @comedians.each do |comedian| %>
-  <ul>
-    <li><%= comedian.name %></li>
-    <li><%= comedian.age %></li>
-    <li><%= comedian.city %></li>
-<% comedian.specials.each do |special| %>
-  <li> Specials:
-    <ul>
-      <li> <%= special.name %> </li>
-      <li> <%= special.length %> </li>
-      <li> <img class="image" src=" <%= special.image %>"> </li>
-    </ul>
-  </li>
-  <% end %>
-  </ul>
-<% end %>
+    <div class="container">
+
+      <aside id="side-bar">
+        <h3 id="side-bar-h3">Comedian Statistics</h3>
+      <table>
+          <tr>
+            <th>Average Age: </th>
+            <td><%= @comedians.average_age %></td>
+          </tr>
+          <tr>
+            <th>Average Length of Specials: </th>
+            <td><%= @comedians.specials_average_length %></td>
+          </tr>
+          <tr>
+            <th>Total Specials: </th>
+            <td> <%= @comedians.num_specials %> </td>
+          </tr>
+          <tr>
+            <th>Minimum Age: </th>
+            <td> <%= @comedians.min_age %> </td>
+          </tr>
+          <tr>
+            <th>Maximium Age: </th>
+            <td> <%= @comedians.max_age %> </td>
+          </tr>
+          <tr>
+            <th>List of Cities: </th>
+            <td><%= @comedians.list_cities %></td>
+          </tr>
+
+      </table>
+    </aside>
+    <main id="main-block">
+
+      <% @comedians.each do |comedian| %>
+        <ul>
+          <li><%= comedian.name %></li>
+          <li><%= comedian.age %></li>
+          <li><%= comedian.city %></li>
+      <% comedian.specials.each do |special| %>
+        <li> Specials:
+          <ul>
+            <li> <%= special.name %> </li>
+            <li> <%= special.length %> </li>
+            <li> <img class="image" src=" <%= special.image %>"> </li>
+          </ul>
+        </li>
+        <% end %>
+        </ul>
+      <% end %>
+      </main>
+    </div>
 </body>
 </html>
